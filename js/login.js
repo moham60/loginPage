@@ -36,12 +36,24 @@ function validation(email,pass){
         
     }
       else{
-       Swal.fire({
-                    title: "Error!",
-                    text: `email is not exist`,
-                    icon: "error",
-                    confirmButtonText: "Ok",
-                  });
+        if(email===""||pass===""){
+            Swal.fire({
+                title: "Error!",
+                text: `please fill values of email and password`,
+                icon: "error",
+                confirmButtonText: "Ok",
+              });
+        }
+        else{
+            Swal.fire({
+                title: "Error!",
+                text: `email is not exist`,
+                icon: "error",
+                confirmButtonText: "Ok",
+        });
+        }
+
+       
       }
 
 }
