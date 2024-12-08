@@ -8,11 +8,8 @@ let logInBtn=document.getElementById("logIn");
 
 function validation(email,pass){
    let users=JSON.parse(localStorage.getItem("user"));
-   console.log(users)
     if(users&&users.length>0){
-       
-        for (let i = 0; i < users.length; i++) {
-           
+        for (let i = 0; i < users.length; i++) { 
             if(users[i].email==email&&users[i].pass==pass){
                 window.location.href="home.html";
                 users[i].logIn="true";
