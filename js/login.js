@@ -35,8 +35,15 @@ function validation(email,pass){
         }
         
     }
-   
-   
+      else{
+       Swal.fire({
+                    title: "Error!",
+                    text: `email is not exist`,
+                    icon: "error",
+                    confirmButtonText: "Ok",
+                  });
+      }
+
 }
 
 logInBtn.addEventListener("click",function(e){
